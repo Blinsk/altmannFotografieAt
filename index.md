@@ -14,9 +14,10 @@ title: "Home"
 
 {% include intro.html %}
 {% include claim.html %}
+{% include hero.html %}
 {% include about.html %}
-{% include services.html %}
 {% include contact.html %}
+{% include artverwandt.html %}
 
 <!--
 <div class="hero">

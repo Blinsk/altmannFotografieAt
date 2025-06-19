@@ -1,0 +1,298 @@
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Lato', sans-serif;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 10.0px;
+}
+
+header {
+  background: #216477;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  background: #f2f2f2;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Logo positioned with vertical spacing */
+.svg-logo {
+  height: 25vh;
+  width: auto;
+  margin-top: 10rem;
+}
+
+.svg-logo svg path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  /*animation: none;*/
+  stroke: white;
+  fill: transparent;
+  stroke-width: 0.25; /* Add this line */
+  transition: fill 1s ease-in-out;
+}
+
+.fill-in svg path {
+  fill: white;
+  transition: fill 1s ease-in-out;
+}
+
+.hero {
+  background: url('/assets/images/lieblingsbild.jpg') center center / cover no-repeat;
+  height: 400px;
+}
+
+.background {
+  background: url('/assets/images/schervin_altmann2.jpg') center center / cover no-repeat fixed;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.segment {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+.segment.white {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+.segment.blue {
+  background-color: rgba(33, 100, 119, 0.85);
+}
+
+.segment.black {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.segment.transparent {
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+#intro {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem; /* space for fixed icon + nav */
+  box-sizing: border-box;
+}
+
+/* Centered nav text at top of section */
+.intro-nav {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.scroll-nav {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.scroll-nav:hover {
+  background: #fff;
+  color: #216477;
+}
+
+.nav-icon {
+  width: 30px;
+  height: auto;
+  filter: brightness(0) invert(1); /* Make white if it's a dark SVG */
+  transition: transform 0.3s ease;
+}
+
+.intro-nav:hover .nav-icon {
+  transform: scale(1.1);
+}
+
+/* Menu Icon in top-left corner, fixed on screen */
+.menu-icon {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: 30px;
+  height: auto;
+  z-index: 1000;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+
+/* ---------- Leistungen Section Styles ---------- */
+
+#claim {
+  padding: 4rem 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+.claim-text-block {
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.claim-text-block p {
+  margin-bottom: 2rem;
+  font-size: 17px;
+}
+
+.claim-text-block p strong {
+  font-weight: bold;
+}
+
+.claim-text-block.quote {
+  font-family: 'Lato', sans-serif;
+  font-size: 21px;
+  margin-top: 3rem;
+  color: #333;
+  text-transform: uppercase;
+  width: 75%;
+}
+
+.claim-logo {
+  margin-top: 2rem;
+}
+
+.claim-logo img {
+  width: 215px;
+  height: auto;
+}
+
+/* Optional animation for "fade-in" paragraph */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1.2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Animated Background Styles ---------- */
+.background-slideshow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.bg-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s ease-in-out, visibility 0s linear 2s;
+  z-index: 0;
+}
+
+.bg-image.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 2s ease-in-out, visibility 0s;
+  z-index: 1;
+}
+
+/* --- Responsive Leistungen Grid --- */
+
+/* Wider container for the section */
+.claim-text-block {
+  max-width: 1400px; /* was 800px before */
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Grid container */
+.claim-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlideUp 1s ease-out forwards;
+}
+
+/* Trigger the animation with a class */
+.animate-columns .claim-grid {
+  animation-delay: 0.3s;
+}
+
+/* Individual column animation (optional stagger) */
+.claim-col {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlideUp 0.8s ease-out forwards;
+}
+
+.claim-col:nth-child(1) { animation-delay: 0.3s; }
+.claim-col:nth-child(2) { animation-delay: 0.6s; }
+.claim-col:nth-child(3) { animation-delay: 0.9s; }
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive: switch to 3 columns */
+@media (min-width: 900px) {
+  .claim-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+

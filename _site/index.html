@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/css/index.css">
+  <!-- Fonts from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Parisienne&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--<div class="background"></div>-->
+<div class="background-slideshow">
+  <div class="bg-image" style="background-image: url('/assets/images/schervin_altmann1.jpg')"></div>
+  <div class="bg-image" style="background-image: url('/assets/images/schervin_altmann2.jpg')"></div>
+  <div class="bg-image" style="background-image: url('/assets/images/schervin_altmann3.jpg')"></div>
+  <div class="bg-image" style="background-image: url('/assets/images/schervin_altmann4.jpg')"></div>
+</div>
+
+<section class="segment transparent" id="intro">
+<img src="/assets/images/menu-icon.svg" alt="Menu icon" class="menu-icon" />
+  <!-- Absolutely positioned centered nav -->
+  <div class="intro-nav">
+    <a href="#services" class="scroll-nav">
+      PEOPLE&nbsp;|&nbsp;WEB&nbsp;|&nbsp;SOCIAL MEDIA&nbsp;|&nbsp;WEDDING
+    </a>
+  </div>
+
+  <!-- Centered logo below -->
+  <div id="altmannfotografie" class="svg-logo"></div>
+</section>
+
+<section class="segment white" id="claim">
+  <div class="claim-text-block">
+
+    <h1 class="quote">
+      Fotografie ist die Geschichte, die man nicht in Worte fassen kann.
+    </h1>
+
+    <div class="claim-logo">
+      <img src="/assets/images/svg-116808x39.svg" alt="Decorative logo" />
+    </div>
+
+    <div class="claim-grid">
+      <div class="claim-col">
+        <p>
+          In der Fotografie gibt es keine Schatten, die nicht beleuchtet werden können.
+          Ich bin <strong>Schervin Altmann</strong> und <strong>Fotografin</strong> in Salzburg.
+          Ich freue mich darauf, Momente im Leben für Sie in Bildern festzuhalten!
+        </p>
+      </div>
+
+      <div class="claim-col">
+        <p>
+          Sie möchten neue Kunden gewinnen? Mit neuen Bildern für
+          <strong>WEB &amp; SOCIAL MEDIA</strong> oder wo auch immer Informationen vermittelt werden,
+          spielen Fotos eine wichtige Rolle. Sie sind ein wichtiger Teil des Contents.
+        </p>
+      </div>
+
+      <div class="claim-col">
+        <p class="fade-in">
+          Oder suchen Sie eine Fotografin für <strong>PEOPLE &amp; WEDDING</strong>? Ich halte
+          authentisch und natürlich die Emotionen für Sie fest und agiere auch unauffällig.
+          Es ist ein Moment der Verlegenheit und lebenslanger Freude.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="segment white" id="about">
+  <h2>Über Mich</h2>
+  <p>Fotografin aus Salzburg mit Leidenschaft für Licht, Augenblicke und Emotionen.</p>
+</section>
+
+<section class="segment black" id="services">
+  <h2>Leistungen</h2>
+  <ul>
+    <li>People &amp; Portrait</li>
+    <li>Hochzeitsfotografie</li>
+    <li>Social Media Content</li>
+  </ul>
+</section>
+
+<section class="segment white" id="kontakt">
+  <h2>Kontakt</h2>
+  <p>Email: <a href="mailto:hallo@altmannfotografie.at">hallo@altmannfotografie.at</a></p>
+  <p>Telefon: <a href="tel:+4369919082556">+43 699 19082556</a></p>
+</section>
+
+<!--
+<div class="hero">
+  <h2>Das nächste Lieblingsfoto!</h2>
+</div>
+-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.1/vivus.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Vivus('altmannfotografie', {
+      file: '/assets/images/altmannfotografie.svg',
+      type: 'delayed',
+      start: 'autostart',
+      duration: 200,
+      animTimingFunction: Vivus.EASE
+    }, function () {
+			document.getElementById('altmannfotografie').classList.add('fill-in');
+			console.log("Drawing done");
+    });
+  });
+</script>
+<script>
+  const images = document.querySelectorAll('.bg-image');
+  let current = 0;
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      if (i === index) {
+        img.classList.add('active');
+      } else {
+        img.classList.remove('active');
+      }
+    });
+  }
+
+  function startSlideshow() {
+    showImage(current);
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      showImage(current);
+    }, 7000); // 5s display + 2s fade
+  }
+
+  window.onload = startSlideshow;
+</script>
+
+</body>
+</html>

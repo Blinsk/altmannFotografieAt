@@ -1,0 +1,20 @@
+title: "Schervin Altmann | Fotografin"
+#baseurl: "https://altmannfotografie.eu"
+baseurl: "" # GitHub Pages project root
+#url: "https://yourdomain.com" # set to actual domain or GitHub Pages URL
+
+theme: minima # or leave blank if using custom
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# GitHub Pages
+markdown: kramdown
+exclude:
+  - node_modules
+  - vendor
+  - build.sh
+  - run.sh
+  - gulpfile.js
+  - package.json
+  - package-lock.json

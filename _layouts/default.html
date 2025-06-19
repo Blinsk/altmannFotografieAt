@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
+  <!-- Fonts from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Parisienne&display=swap" rel="stylesheet">
+</head>
+<body>
+    {{ content }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.1/vivus.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Vivus('altmannfotografie', {
+      file: '{{ "/assets/images/altmannfotografie.svg" | relative_url }}',
+      type: 'delayed',
+      start: 'autostart',
+      duration: 200,
+      animTimingFunction: Vivus.EASE
+    }, function () {
+			document.getElementById('altmannfotografie').classList.add('fill-in');
+			console.log("Drawing done");
+    });
+  });
+</script>
+<script>
+  const images = document.querySelectorAll('.bg-image');
+  let current = 0;
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      if (i === index) {
+        img.classList.add('active');
+      } else {
+        img.classList.remove('active');
+      }
+    });
+  }
+
+  function startSlideshow() {
+    showImage(current);
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      showImage(current);
+    }, 7000); // 5s display + 2s fade
+  }
+
+  window.onload = startSlideshow;
+</script>
+
+</body>
+</html>

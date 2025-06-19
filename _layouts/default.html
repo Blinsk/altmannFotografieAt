@@ -49,6 +49,16 @@
 
   window.onload = startSlideshow;
 </script>
-
+<script>
+  window.addEventListener("scroll", function () {
+    console.log('Scrolling...');
+	const topBtn = document.querySelector(".go-to-top");
+    if (window.scrollY > 300) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  });
+</script>
 </body>
 </html>

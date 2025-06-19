@@ -575,3 +575,31 @@ footer {
   width: 80px;
   height: auto;
 }
+
+/* ---------- Go to top ---------- */
+
+.go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: none; /*block;*/
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.go-to-top:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.go-to-top img {
+  width: 100%;
+  height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}

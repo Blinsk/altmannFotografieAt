@@ -18,7 +18,8 @@
 </div>
 
 <section class="segment transparent" id="intro">
-<img src="/assets/images/menu-icon.svg" alt="Menu icon" class="menu-icon" />
+<a id="top"></a>
+	<img src="/assets/images/menu-icon.svg" alt="Menu icon" class="menu-icon" />
   <!-- Absolutely positioned centered nav -->
   <div class="intro-nav">
     <a href="#services" class="scroll-nav">
@@ -155,6 +156,9 @@
       <img src="/assets/images/artverwandt.png" srcset="/assets/images/artverwandt_2x.png 2x" alt="artverwandt logo" width="80" height="80" class="artverwandt-logo" />
     </a>
   </div>
+  <a href="#top" class="go-to-top" title="Zurück nach oben">
+  <img src="/assets/images/gototop_prodigy.png" alt="Go to top" />
+</a>
 </section>
 
 <!--
@@ -202,6 +206,16 @@
 
   window.onload = startSlideshow;
 </script>
-
+<script>
+  window.addEventListener("scroll", function () {
+    console.log('Scrolling...');
+	const topBtn = document.querySelector(".go-to-top");
+    if (window.scrollY > 300) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  });
+</script>
 </body>
 </html>

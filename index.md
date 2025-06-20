@@ -16,6 +16,7 @@ title: "Home"
 {% include claim.html %}
 {% include hero.html %}
 {% include about.html %}
+{% include gallery.html %}
 {% include contact.html %}
 {% include artverwandt.html %}
 

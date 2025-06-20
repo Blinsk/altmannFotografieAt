@@ -7,6 +7,18 @@
   <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
   <!-- Fonts from Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Parisienne:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- In _includes/head.html or in your layout -->
+  <!-- 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.9.0-beta.1/css/lightgallery-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.9.0-beta.1/lightgallery.umd.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.9.0-beta.1/plugins/zoom/lg-zoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.9.0-beta.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
 </head>
 <body>
     {{ content }}
@@ -59,6 +71,17 @@
       topBtn.style.display = "none";
     }
   });
+</script>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+	console.log('Starting gallery!');
+  lightGallery(document.getElementById('lightgallery'), {
+    selector: '.gallery-item',
+    plugins: [lgZoom, lgThumbnail],
+    speed: 300,
+	thumbnails: true,
+  });
+		});
 </script>
 </body>
 </html>

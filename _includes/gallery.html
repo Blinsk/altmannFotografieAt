@@ -1,0 +1,11 @@
+<section id="gallery" class="gallery-section">
+  <div id="lightgallery">
+    {% for image in site.static_files %}
+      {% if image.path contains 'assets/images/gallery/' %}
+        <a href="{{ image.path }}" class="gallery-item">
+          <img src="{{ image.path }}" alt="Gallery image" />
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

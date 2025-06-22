@@ -30,16 +30,27 @@
 </div>
 
 <section class="segment transparent" id="intro">
-<a id="top"></a>
-	<img src="/assets/images/menu-icon.svg" alt="Menu icon" class="menu-icon" />
-  <!-- Absolutely positioned centered nav -->
+  <a id="top"></a>
+
+<!-- Menu Icon -->
+<img src="/assets/images/menu-icon.svg" alt="Menu icon" class="menu-icon" id="menuToggle" />
+
+<!-- Fullscreen Menu Overlay -->
+<nav class="menu-overlay" id="menuOverlay">
+  <ul>
+    <li><a href="#about">Über mich</a></li>
+    <li><a href="#gallery">Galerie</a></li>
+    <li><a href="#services">Leistungen</a></li>
+    <li><a href="#contact">Kontakt</a></li>
+  </ul>
+</nav>
+
   <div class="intro-nav">
     <a href="#services" class="scroll-nav">
       PEOPLE&nbsp;|&nbsp;WEB&nbsp;|&nbsp;SOCIAL MEDIA&nbsp;|&nbsp;WEDDING
     </a>
   </div>
 
-  <!-- Centered logo below -->
   <div id="altmannfotografie" class="svg-logo"></div>
 </section>
 
@@ -646,6 +657,37 @@
 	thumbnails: true,
   });
 		});
+</script>
+<script>
+  // Select all links inside the menu
+  document.querySelectorAll('.menu-overlay a').forEach(link => {
+    link.addEventListener('click', () => {
+      // Add a temporary class to prevent hover effect
+      const overlay = document.getElementById('menuOverlay');
+      overlay.style.opacity = '0';
+      overlay.style.pointerEvents = 'none';
+
+      // Optional: add a short delay to allow smooth scroll before re-enabling
+      setTimeout(() => {
+        overlay.removeAttribute('style'); // let hover control it again
+      }, 800);
+    });
+  });
+</script>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const menuOverlay = document.getElementById('menuOverlay');
+
+  menuToggle.addEventListener('click', () => {
+    menuOverlay.classList.toggle('active');
+  });
+
+  // Close menu on link click
+  document.querySelectorAll('#menuOverlay a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuOverlay.classList.remove('active');
+    });
+  });
 </script>
 </body>
 </html>

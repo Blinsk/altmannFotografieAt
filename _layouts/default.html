@@ -83,5 +83,36 @@
   });
 		});
 </script>
+<script>
+  // Select all links inside the menu
+  document.querySelectorAll('.menu-overlay a').forEach(link => {
+    link.addEventListener('click', () => {
+      // Add a temporary class to prevent hover effect
+      const overlay = document.getElementById('menuOverlay');
+      overlay.style.opacity = '0';
+      overlay.style.pointerEvents = 'none';
+
+      // Optional: add a short delay to allow smooth scroll before re-enabling
+      setTimeout(() => {
+        overlay.removeAttribute('style'); // let hover control it again
+      }, 800);
+    });
+  });
+</script>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const menuOverlay = document.getElementById('menuOverlay');
+
+  menuToggle.addEventListener('click', () => {
+    menuOverlay.classList.toggle('active');
+  });
+
+  // Close menu on link click
+  document.querySelectorAll('#menuOverlay a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuOverlay.classList.remove('active');
+    });
+  });
+</script>
 </body>
 </html>

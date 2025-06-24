@@ -38,10 +38,12 @@
 <!-- Fullscreen Menu Overlay -->
 <nav class="menu-overlay" id="menuOverlay">
   <ul>
-    <li><a href="#about">Über mich</a></li>
-    <li><a href="#gallery">Galerie</a></li>
-    <li><a href="#services">Leistungen</a></li>
-    <li><a href="#contact">Kontakt</a></li>
+    <li><a href="#about">ÜBER MICH</a></li>
+	<li><a href=""> &nbsp;|&nbsp; </a></li>
+	<li><a href="#gallery">GALERIE</a></li>
+	<li><a href=""> &nbsp;|&nbsp; </a></li>
+    <!--<li><a href="#services">Leistungen</a></li>-->
+    <li><a href="#contact">KONTAKT</a></li>
   </ul>
 </nav>
 
@@ -502,6 +504,20 @@
       
     
       
+        <a href="/assets/images/gallery/AltmannFotografie_454A3023.jpg" class="gallery-item">
+          <img src="/assets/images/gallery/AltmannFotografie_454A3023.jpg" alt="Gallery image" />
+        </a>
+      
+    
+      
+        <a href="/assets/images/gallery/AltmannFotografie_454A3360.jpg" class="gallery-item">
+          <img src="/assets/images/gallery/AltmannFotografie_454A3360.jpg" alt="Gallery image" />
+        </a>
+      
+    
+      
+    
+      
     
       
     
@@ -653,6 +669,7 @@
   lightGallery(document.getElementById('lightgallery'), {
     selector: '.gallery-item',
     plugins: [lgZoom, lgThumbnail],
+	licenseKey: '881058CA-47F4-49E1-9CD7-24D48E092BB2',
     speed: 300,
 	thumbnails: true,
   });

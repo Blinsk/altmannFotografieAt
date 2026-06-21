@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/css/index.css">
+  <!-- Fonts from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Parisienne:wght@300;400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.9.0-beta.1/css/lightgallery-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.9.0-beta.1/lightgallery.umd.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.9.0-beta.1/plugins/zoom/lg-zoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.9.0-beta.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+</head>
+<body>
+
+<!-- background slideshow -->
+<div class="background-slideshow">
+  <div class="bg-image" style="background-image: url('/assets/images/schervin_altmann1.jpg')"></div>
+  <div class="bg-image" style="background-image: url('/assets/images/schervin_altmann2.jpg')"></div>
+  <div class="bg-image" style="background-image: url('/assets/images/schervin_altmann3.jpg')"></div>
+  <div class="bg-image" style="background-image: url('/assets/images/schervin_altmann4.jpg')"></div>
+</div>
+
+<!-- intro -->
+<section class="segment transparent" id="intro">
+  <a id="top"></a>
+
+  <!-- Menu Icon -->
+  <img src="/assets/images/menu-icon.svg" alt="Menu icon" class="menu-icon" id="menuToggle" />
+
+  <!-- Fullscreen Menu Overlay -->
+  <nav class="menu-overlay" id="menuOverlay">
+    <ul>
+      <li><a href="#about">ÜBER MICH</a></li>
+      <li><a href=""> &nbsp;|&nbsp; </a></li>
+      <li><a href="#gallery">GALERIE</a></li>
+      <li><a href=""> &nbsp;|&nbsp; </a></li>
+      <li><a href="#contact">KONTAKT</a></li>
+    </ul>
+  </nav>
+
+  <div class="intro-nav">
+    <a href="#services" class="scroll-nav">
+      PEOPLE&nbsp;|&nbsp;WEB&nbsp;|&nbsp;SOCIAL MEDIA&nbsp;|&nbsp;WEDDING
+    </a>
+  </div>
+
+  <div id="altmannfotografie" class="svg-logo"></div>
+</section>
+
+<!-- claim -->
+<section class="segment white" id="claim">
+  <div class="claim-text-block">
+
+    <h1 class="quote">
+      Fotografie ist die Geschichte, die man nicht in Worte fassen kann.
+    </h1>
+
+    <div class="claim-logo">
+      <img src="/assets/images/svg-116808x39.svg" alt="Decorative logo">
+    </div>
+
+    <div class="claim-grid">
+      <div class="claim-col">
+        <p>
+          In der Fotografie gibt es keine Schatten, die nicht beleuchtet werden können.
+          Ich bin <strong>Schervin Altmann</strong> und <strong>Fotografin</strong> in Salzburg.
+          Ich freue mich darauf, Momente im Leben für Sie in Bildern festzuhalten!
+        </p>
+      </div>
+
+      <div class="claim-col">
+        <p>
+          Sie möchten neue Kunden gewinnen? Mit neuen Bildern für
+          <strong>WEB &amp; SOCIAL MEDIA</strong> oder wo auch immer Informationen vermittelt werden,
+          spielen Fotos eine wichtige Rolle. Sie sind ein wichtiger Teil des Contents.
+        </p>
+      </div>
+
+      <div class="claim-col">
+        <p class="fade-in">
+          Oder suchen Sie eine Fotografin für <strong>PEOPLE &amp; WEDDING</strong>? Ich halte
+          authentisch und natürlich die Emotionen für Sie fest und agiere auch unauffällig.
+          Es ist ein Moment der Verlegenheit und lebenslanger Freude.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- hero -->
+<section class="hero-section" id="hero">
+  <div class="hero-content">
+    <p class="hero-line-1">Welches meiner Bilder ist mein Lieblingsfoto?</p>
+    <p class="hero-line-2">Das Bild, das ich als nächstes machen werde!</p>
+    <p class="hero-signature">Schervin Altmann</p>
+  </div>
+</section>
+
+<!-- about -->
+<section class="segment white" id="about">
+  <div class="about-text-block">
+
+    <h2 class="about-heading">Über mich</h2>
+
+    <div class="about-logo-wrapper">
+      <div class="about-logo">
+        <img src="/assets/images/svg-18402x14.svg" alt="Decorative icon">
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-col">
+        <p>
+          Meine Leidenschaft für die Fotografie entbrannte im letzten Jahr meines Studiums an der Universität Salzburg,
+          als ich mehrere Lehrveranstaltungen zu diesem Thema besuchte. Hier wurde mir bewusst, dass die Fotografie mehr als ein Hobby für mich ist.
+        </p>
+      </div>
+
+      <div class="about-col">
+        <p>
+          Beim Fotografieren kann ich mich verlieren, es bereitet mir eine enorme Freude mit dem Licht zu spielen
+          und die Schönheit des Augenblicks einzufangen. Natürlich braucht es auch immer etwas Glück.
+        </p>
+      </div>
+
+      <div class="about-col">
+        <p>
+          Ich bin 1981 geboren und lebe mit meinem Mann und mit meinem Hund in Salzburg. Gemeinsame Zeit mit den Beiden in der Natur
+          zu verbringen ist für mich neben dem Fotografieren die schönste Beschäftigung.
+        </p>
+      </div>
+    </div>
+
+    <a id="schervinaltmann" class="scroll-anchor"></a>
+  </div>
+</section>
+
+<!-- gallery -->
+<section id="gallery" class="gallery-section">
+  <div id="lightgallery"></div>
+</section>
+
+<!-- contact -->
+<section class="segment black" id="contact">
+  <div class="contact-content">
+
+    <h2 class="contact-heading">So kommen wir in Kontakt</h2>
+
+    <div class="contact-decoration">
+      <img src="/assets/images/svg-57414x19.svg" alt="Decorative SVG" />
+    </div>
+
+    <div class="contact-grid-3x3">
+
+      <div class="contact-cell">Schervin Altmann</div>
+      <div class="contact-cell icon"><img src="/assets/images/icon_phone17x17.png" alt="Phone" /></div>
+      <div class="contact-cell"><a href="tel:+4369919082556">+43 699 19082556</a></div>
+
+      <div class="contact-cell">Mehrlgutweg 11</div>
+      <div class="contact-cell icon"><img src="/assets/images/icon_email17x17.png" alt="Email" /></div>
+      <div class="contact-cell"><a href="mailto:hallo@altmannfotografie.at">hallo@altmannfotografie.at</a></div>
+
+      <div class="contact-cell">5020 Salzburg</div>
+      <div class="contact-cell icon"><img src="/assets/images/icon_instagram17x17.png" alt="Instagram" /></div>
+      <div class="contact-cell"><a href="https://www.instagram.com/schervin_altmann/" target="_blank">instagram.com/schervin_altmann</a></div>
+
+      <div class="contact-cell">Österreich</div>
+      <div class="contact-cell icon"><img src="/assets/images/icon_facebook17x17.png" alt="Facebook" /></div>
+      <div class="contact-cell"><a href="https://www.facebook.com/altmannfotografie" target="_blank">facebook.com/altmannfotografie</a></div>
+    </div>
+    <div class="contact-circle-image">
+      <img src="/assets/images/kontakt_sw.jpg" alt="Portrait" class="circle-img img-default" />
+      <img src="/assets/images/kontakt_col.jpg" alt="Portrait Hover" class="circle-img img-hover" />
+    </div>
+
+    <a class="scroll-anchor" id="kontakt-anchor"></a>
+  </div>
+</section>
+
+<!-- artverwandt -->
+<section class="segment artverwandt" id="artverwandt">
+  <div class="artverwandt-content">
+    <p class="artverwandt-tagline">made with love, for great people.</p>
+
+    <a href="https://artverwandt.website" target="_blank" title="artverwandt.website" class="artverwandt-logo-link">
+      <img
+        src="/assets/images/artverwandt.png"
+        srcset="/assets/images/artverwandt_2x.png 2x"
+        alt="artverwandt logo"
+        width="80"
+        height="80"
+        class="artverwandt-logo"
+      />
+    </a>
+  </div>
+  <a href="#top" class="go-to-top" title="Zurück nach oben">
+    <img src="/assets/images/gototop_prodigy.png" alt="Go to top" />
+  </a>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.1/vivus.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Vivus('altmannfotografie', {
+      file: '/assets/images/altmannfotografie.svg',
+      type: 'delayed',
+      start: 'autostart',
+      duration: 200,
+      animTimingFunction: Vivus.EASE
+    }, function () {
+      document.getElementById('altmannfotografie').classList.add('fill-in');
+      console.log("Drawing done");
+    });
+  });
+</script>
+<script>
+  const images = document.querySelectorAll('.bg-image');
+  let current = 0;
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      if (i === index) {
+        img.classList.add('active');
+      } else {
+        img.classList.remove('active');
+      }
+    });
+  }
+
+  function startSlideshow() {
+    showImage(current);
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      showImage(current);
+    }, 7000); // 5s display + 2s fade
+  }
+
+  window.onload = startSlideshow;
+</script>
+<script>
+  window.addEventListener("scroll", function () {
+    const topBtn = document.querySelector(".go-to-top");
+    if (window.scrollY > 300) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch('/assets/images/gallery/manifest.json')
+      .then(function (response) { return response.json(); })
+      .then(function (files) {
+        const container = document.getElementById('lightgallery');
+        files.forEach(function (file) {
+          const path = '/assets/images/gallery/' + file;
+          const a = document.createElement('a');
+          a.href = path;
+          a.className = 'gallery-item';
+          const img = document.createElement('img');
+          img.src = path;
+          img.alt = 'Gallery image';
+          a.appendChild(img);
+          container.appendChild(a);
+        });
+        lightGallery(container, {
+          selector: '.gallery-item',
+          plugins: [lgZoom, lgThumbnail],
+          licenseKey: '881058CA-47F4-49E1-9CD7-24D48E092BB2',
+          speed: 300,
+          thumbnails: true,
+        });
+      });
+  });
+</script>
+<script>
+  // Select all links inside the menu
+  document.querySelectorAll('.menu-overlay a').forEach(link => {
+    link.addEventListener('click', () => {
+      // Add a temporary class to prevent hover effect
+      const overlay = document.getElementById('menuOverlay');
+      overlay.style.opacity = '0';
+      overlay.style.pointerEvents = 'none';
+
+      // Optional: add a short delay to allow smooth scroll before re-enabling
+      setTimeout(() => {
+        overlay.removeAttribute('style'); // let hover control it again
+      }, 800);
+    });
+  });
+</script>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const menuOverlay = document.getElementById('menuOverlay');
+
+  menuToggle.addEventListener('click', () => {
+    menuOverlay.classList.toggle('active');
+  });
+
+  // Close menu on link click
+  document.querySelectorAll('#menuOverlay a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuOverlay.classList.remove('active');
+    });
+  });
+</script>
+</body>
+</html>

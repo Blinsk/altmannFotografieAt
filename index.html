@@ -5,14 +5,14 @@
   <title>Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/assets/css/index.css">
-  <!-- Fonts from Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Parisienne:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Fonts and libraries are self-hosted in assets/vendor: no third-party requests (DSGVO) -->
+  <link rel="stylesheet" href="/assets/vendor/fonts/fonts.css">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.9.0-beta.1/css/lightgallery-bundle.min.css">
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.9.0-beta.1/lightgallery.umd.min.js"></script>
+<link rel="stylesheet" href="/assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+<script src="/assets/vendor/lightgallery/lightgallery.umd.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.9.0-beta.1/plugins/zoom/lg-zoom.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.9.0-beta.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+<script src="/assets/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+<script src="/assets/vendor/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
 </head>
 <body>
 
@@ -39,6 +39,10 @@
       <li><a href="#gallery">GALERIE</a></li>
       <li><a href=""> &nbsp;|&nbsp; </a></li>
       <li><a href="#contact">KONTAKT</a></li>
+      <li><a href=""> &nbsp;|&nbsp; </a></li>
+      <li><a href="/impressum.html">IMPRESSUM</a></li>
+      <li><a href=""> &nbsp;|&nbsp; </a></li>
+      <li><a href="/datenschutz.html">DATENSCHUTZ</a></li>
     </ul>
   </nav>
 
@@ -197,13 +201,17 @@
         class="artverwandt-logo"
       />
     </a>
+
+    <p class="legal-links">
+      <a href="/impressum.html">Impressum</a> &middot; <a href="/datenschutz.html">Datenschutz</a>
+    </p>
   </div>
   <a href="#top" class="go-to-top" title="Zurück nach oben">
     <img src="/assets/images/gototop_prodigy.png" alt="Go to top" />
   </a>
 </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.1/vivus.min.js"></script>
+<script src="/assets/vendor/vivus/vivus.min.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     new Vivus('altmannfotografie', {
@@ -264,6 +272,8 @@
           a.href = path;
           a.className = 'gallery-item';
           const img = document.createElement('img');
+          img.loading = 'lazy'; // set before src so the browser defers the download
+          img.decoding = 'async';
           img.src = path;
           img.alt = 'Gallery image';
           a.appendChild(img);

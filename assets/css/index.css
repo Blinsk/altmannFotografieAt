@@ -185,9 +185,11 @@ footer {
 
 .menu-overlay ul {
   list-style: none;
-  padding: 0;
+  padding: 0 16px;
   margin: 0;
   text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .menu-overlay li {
@@ -728,3 +730,61 @@ html {
   }
 }
 
+
+/* ---------- Legal (Impressum / Datenschutz) ---------- */
+
+.legal-links {
+  font-size: 12px;
+  margin: 0;
+  opacity: 0.7;
+}
+
+.legal-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.legal-links a:hover {
+  text-decoration: underline;
+}
+
+.legal-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 16px 4rem;
+  color: #333;
+  overflow-wrap: break-word;
+}
+
+.legal-page h1 {
+  font-size: 32px;
+  margin-bottom: 0.5rem;
+}
+
+.legal-page h2 {
+  margin-top: 2.5rem;
+  font-weight: 400;
+}
+
+.legal-page h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 1.5rem;
+}
+
+.legal-page p,
+.legal-page li {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.legal-page a {
+  color: #216477;
+}
+
+.legal-page .back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 14px;
+  text-decoration: none;
+}
